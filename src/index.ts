@@ -1,36 +1,33 @@
-import {getOptions, OptionObject} from 'loader-utils';
-import * as validateOptions from 'schema-utils';
-import {loader as webpackLoader} from 'webpack';
+// @ts-ignore
+import * as browserslist from 'browserslist';
+import * as ts from 'typescript';
 
-export interface LoaderOptions extends OptionObject {
-    filename: string;
-    browsers?: string;
+export interface PolyfillsGeneratorOptions {
+    targets?: string;
 }
 
-const loaderName: string = 'ts-polyfill-loader';
+export class PolyfillsGenerator {
+    private targets: string[];
 
-const loaderOptionsSchema = {
-    type: 'object',
-    properties: {
-        filename: {
-            type: 'string'
-        },
-        browsers: {
-            type: 'string'
-        }
-    },
-    additionalProperties: false
-};
-
-export default function loader (this: webpackLoader.LoaderContext, source: string) {
-    const options: LoaderOptions = getOptions(this) as LoaderOptions;
-
-    validateOptions(loaderOptionsSchema, options, loaderName);
-    const callback = this.async() as webpackLoader.loaderCallback;
-
-    if (!options.filename) {
-        return callback(new Error(`[${ loaderName }]: \`filename\` option is missing`));
+    constructor (options: PolyfillsGeneratorOptions) {
+        this.targets = browserslist(options.targets);
+        this.onNode = this.onNode.bind(this);
     }
 
-    callback(null, source);
+    private onNode (node: ts.Node) {
+        ts.forEachChild(node, this.onNode);
+    }
+
+    process (source: string): Promise<string> {
+        const sourceFile: ts.SourceFile = ts.createSourceFile(
+            'unknown',
+            source,
+            ts.ScriptTarget.Latest,
+            false
+        );
+
+        this.onNode(sourceFile);
+
+        return Promise.resolve(source);
+    }
 }

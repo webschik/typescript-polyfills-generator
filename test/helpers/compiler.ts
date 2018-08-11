@@ -1,8 +1,9 @@
+// @ts-ignore
 import * as Memoryfs from 'memory-fs';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import {Compiler, Stats} from 'webpack';
-import {LoaderOptions} from '../../src/index';
+import {LoaderOptions} from '../../src/webpack-loader';
 
 export default function compile (filepath: string, options: {loaderOptions?: LoaderOptions} = {}): Promise<Stats> {
     const compiler: Compiler = webpack({
@@ -19,14 +20,10 @@ export default function compile (filepath: string, options: {loaderOptions?: Loa
                     test: /\.tsx?$/,
                     use: [
                         {
-                            loader: 'file-loader',
-                            options: {
-                                name: '[hash]',
-                                emitFile: false
-                            }
+                            loader: 'raw-loader'
                         },
                         {
-                            loader: path.resolve(__dirname, '../../src/index.ts'),
+                            loader: path.resolve(__dirname, '../../src/webpack-loader.ts'),
                             options: Object.assign({}, options.loaderOptions)
                         }
                     ]
@@ -46,4 +43,4 @@ export default function compile (filepath: string, options: {loaderOptions?: Loa
             resolve(stats);
         });
     });
-};
+}
