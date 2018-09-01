@@ -18,7 +18,7 @@ test(`transformer with awesome-typescript-loader`, () => {
                 {
                     loader: 'awesome-typescript-loader',
                     options: {
-                        getCustomTransformers (program: ts.Program) {
+                        getCustomTransformers(program: ts.Program) {
                             return {
                                 before: [
                                     createPolyfillsTransformerFactory(program, {

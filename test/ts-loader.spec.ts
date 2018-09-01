@@ -18,7 +18,7 @@ xtest(`transformer with ts-loader`, () => {
                 {
                     loader: 'ts-loader',
                     options: {
-                        getCustomTransformers (program: ts.Program) {
+                        getCustomTransformers(program: ts.Program) {
                             return {
                                 before: [
                                     createPolyfillsTransformer(program, {

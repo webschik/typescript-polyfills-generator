@@ -14,7 +14,7 @@ interface BuiltInsList {
     [key: string]: BrowsersSupportList;
 }
 
-export type PolyfillStatusOrVersion = boolean|string|'all';
+export type PolyfillStatusOrVersion = boolean | string | 'all';
 
 export interface PolyfillsList {
     [key: string]: PolyfillStatusOrVersion;
@@ -85,7 +85,7 @@ for (const builtIn in allBuiltInsWithEsVersion) {
 //     }
 // }
 
-export function createPolyfillsTransformerFactory (
+export function createPolyfillsTransformerFactory(
     program: ts.Program,
     options: PolyfillsGeneratorOptions = {}
 ): ts.TransformerFactory<ts.SourceFile> {
@@ -98,13 +98,12 @@ export function createPolyfillsTransformerFactory (
             const statusOrVersion: PolyfillStatusOrVersion = polyfillsConfig[builtIn];
 
             polyfills[normalizeBuiltInName(builtIn)] =
-                statusOrVersion === allVersionsKey ?
-                    // "first" version
-                    '0.0.1' :
-                    (statusOrVersion === true || statusOrVersion === false) ?
-                        statusOrVersion :
-                        semverify(statusOrVersion as string);
-
+                statusOrVersion === allVersionsKey
+                    ? // "first" version
+                      '0.0.1'
+                    : statusOrVersion === true || statusOrVersion === false
+                        ? statusOrVersion
+                        : semverify(statusOrVersion as string);
         }
     }
 
@@ -116,12 +115,12 @@ export function createPolyfillsTransformerFactory (
         targets[normalizedBrowserName] = splitVersion === allVersionsKey ? splitVersion : semverify(splitVersion);
     });
 
-    return function polyfillsTransformerFactory (context: ts.TransformationContext): ts.Transformer<ts.SourceFile> {
-        function visitor (node: ts.Node): ts.Node {
+    return function polyfillsTransformerFactory(context: ts.TransformationContext): ts.Transformer<ts.SourceFile> {
+        function visitor(node: ts.Node): ts.Node {
             return ts.visitEachChild(node, visitor, context);
         }
 
-        return function polyfillsTransformer (sourceFile: ts.SourceFile) {
+        return function polyfillsTransformer(sourceFile: ts.SourceFile) {
             ts.visitNode(sourceFile, visitor);
 
             return sourceFile;
