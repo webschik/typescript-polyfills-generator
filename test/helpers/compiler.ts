@@ -2,10 +2,9 @@
 import * as Memoryfs from 'memory-fs';
 import * as path from 'path';
 import * as webpack from 'webpack';
-import {Compiler, Stats} from 'webpack';
-import {LoaderOptions} from '../../src/webpack-loader';
+import {Compiler, RuleSetRule, Stats, Configuration} from 'webpack';
 
-export default function compile (filepath: string, options: {loaderOptions?: LoaderOptions} = {}): Promise<Stats> {
+export default function compile(filepath: string, options: {tsLoaders: RuleSetRule[]}): Promise<Stats> {
     const compiler: Compiler = webpack({
         context: __dirname,
         entry: filepath,
@@ -22,15 +21,12 @@ export default function compile (filepath: string, options: {loaderOptions?: Loa
                         {
                             loader: 'raw-loader'
                         },
-                        {
-                            loader: path.resolve(__dirname, '../../src/webpack-loader.ts'),
-                            options: Object.assign({}, options.loaderOptions)
-                        }
+                        ...options.tsLoaders
                     ]
                 }
             ]
         }
-    });
+    } as Configuration);
 
     compiler.outputFileSystem = new Memoryfs() as any;
 
