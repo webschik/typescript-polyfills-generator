@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as ts from 'typescript';
 import {promisify} from 'util';
 import {Stats} from 'webpack';
-import {createPolyfillsTransformer} from '../src/index';
+import {createPolyfillsTransformerFactory} from '../src/index';
 import compile from './helpers/compiler';
 
 const readFile = promisify(fs.readFile);
@@ -21,7 +21,7 @@ xtest(`transformer with ts-loader`, () => {
                         getCustomTransformers(program: ts.Program) {
                             return {
                                 before: [
-                                    createPolyfillsTransformer(program, {
+                                    createPolyfillsTransformerFactory(program, {
                                         targets: 'last 2 version, not ie < 11, not ie_mob < 11, safari >= 9'
                                     })
                                 ]

@@ -187,16 +187,28 @@
     "ios": "6",
     "electron": "1.1"
   },
-  "es6.array.some": {
-    "chrome": "5",
+  "es6.array.slice": {
+    "chrome": "1",
     "opera": "10.10",
     "edge": "12",
     "firefox": "2",
     "safari": "3.1",
     "node": "0.10",
     "ie": "9",
-    "android": "4.0",
-    "ios": "6",
+    "android": "1.0",
+    "ios": "1",
+    "electron": "1"
+  },
+  "es6.array.some": {
+    "chrome": "1",
+    "opera": "1",
+    "edge": "1",
+    "firefox": "1",
+    "safari": "1",
+    "node": "0.1",
+    "ie": "9",
+    "android": "1.0",
+    "ios": "1",
     "electron": "1.1"
   },
   "es6.array.sort": {

@@ -1,8 +1,7 @@
 // @ts-ignore
 import * as browserslist from 'browserslist';
 import * as ts from 'typescript';
-import normalizeBuiltInName from './normalize-built-in-name';
-import semverify from './semverify';
+import semverify, {firstVersion} from './semverify';
 
 interface BrowsersSupportList {
     // [browser name]: version
@@ -14,10 +13,10 @@ interface BuiltInsList {
     [key: string]: BrowsersSupportList;
 }
 
-export type PolyfillStatusOrVersion = boolean | string | 'all';
+export type PolyfillStatusOrModuleName = boolean | string;
 
 export interface PolyfillsList {
-    [key: string]: PolyfillStatusOrVersion;
+    [key: string]: PolyfillStatusOrModuleName;
 }
 
 export interface PolyfillsGeneratorOptions {
@@ -27,6 +26,7 @@ export interface PolyfillsGeneratorOptions {
 
 const {hasOwnProperty} = Object.prototype;
 const allBuiltInsWithEsVersion: BuiltInsList = require('../data/built-ins.json');
+const allPolyfills: PolyfillsList = require('../data/polyfills.json');
 const allVersionsKey: string = 'all';
 const allBuiltIns: BuiltInsList = Object.create(null);
 const browserNameMap: {[key: string]: string} = {
@@ -48,42 +48,9 @@ for (const builtIn in allBuiltInsWithEsVersion) {
             }
         }
 
-        allBuiltIns[normalizeBuiltInName(builtIn)] = normalizedBrowsersList;
+        allBuiltIns[builtIn] = normalizedBrowsersList;
     }
 }
-
-// export class PolyfillsGenerator {
-//     private targets: string[];
-//
-//     constructor(options: PolyfillsGeneratorOptions) {
-//         this.targets = browserslist(options.targets);
-//     }
-//
-//     process(fileName: string, sourceText: string): Promise<string> {
-//         const program: ts.Program = ts.createProgram([fileName], {});
-//         const checker: ts.TypeChecker = program.getTypeChecker();
-//
-//         for (const sourceFile of program.getSourceFiles()) {
-//             if (!sourceFile.isDeclarationFile) {
-//                 ts.forEachChild(sourceFile, onNode);
-//             }
-//         }
-//
-//         function onNode(node: ts.Node) {
-//             const symbol: ts.Symbol | void = checker.getSymbolAtLocation(node);
-//
-//             if (symbol) {
-//                 console.log(
-// checker.typeToString(checker.getTypeOfSymbolAtLocation(symbol, symbol.valueDeclaration
-// !)));
-//             }
-//
-//             ts.forEachChild(node, onNode);
-//         }
-//
-//         return Promise.resolve(sourceText);
-//     }
-// }
 
 export function createPolyfillsTransformerFactory(
     program: ts.Program,
@@ -95,15 +62,7 @@ export function createPolyfillsTransformerFactory(
 
     for (const builtIn in polyfillsConfig) {
         if (hasOwnProperty.call(polyfillsConfig, builtIn)) {
-            const statusOrVersion: PolyfillStatusOrVersion = polyfillsConfig[builtIn];
-
-            polyfills[normalizeBuiltInName(builtIn)] =
-                statusOrVersion === allVersionsKey
-                    ? // "first" version
-                      '0.0.1'
-                    : statusOrVersion === true || statusOrVersion === false
-                        ? statusOrVersion
-                        : semverify(statusOrVersion as string);
+            polyfills[builtIn] = polyfillsConfig[builtIn];
         }
     }
 
@@ -112,11 +71,21 @@ export function createPolyfillsTransformerFactory(
         const normalizedBrowserName: string = browserNameMap[browserName] || browserName;
         const splitVersion: string = browserVersion.split('-')[0].toLowerCase();
 
-        targets[normalizedBrowserName] = splitVersion === allVersionsKey ? splitVersion : semverify(splitVersion);
+        targets[normalizedBrowserName] = splitVersion === allVersionsKey ? firstVersion : semverify(splitVersion);
     });
 
     return function polyfillsTransformerFactory(context: ts.TransformationContext): ts.Transformer<ts.SourceFile> {
         function visitor(node: ts.Node): ts.Node {
+            switch (node.kind) {
+                case ts.SyntaxKind.PropertyAccessExpression: {
+                    const {name, expression} = node as ts.PropertyAccessExpression;
+
+                    break;
+                }
+                default:
+                //
+            }
+
             return ts.visitEachChild(node, visitor, context);
         }
 

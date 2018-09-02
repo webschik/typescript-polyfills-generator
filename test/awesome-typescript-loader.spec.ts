@@ -22,7 +22,7 @@ test(`transformer with awesome-typescript-loader`, () => {
                             return {
                                 before: [
                                     createPolyfillsTransformerFactory(program, {
-                                        targets: 'last 2 version, not ie < 11, not ie_mob < 11, safari >= 9'
+                                        targets: 'ie 11'
                                     })
                                 ]
                             };
@@ -32,10 +32,7 @@ test(`transformer with awesome-typescript-loader`, () => {
             ]
         })
     ]).then(([source, stats]: [string, Stats]) => {
-        const output: string = stats
-            .toJson()
-            .modules[0].source.replace(/(module\.exports = ")/, '$1\n')
-            .replace(/\\n/g, '\n');
+        const output: string = stats.toJson().modules[0].source;
 
         expect(output).toBe(`module.exports = "\n${source}"`);
         expect(output).toMatchSnapshot();
