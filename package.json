@@ -7,7 +7,7 @@
     "test": "jest --no-cache",
     "build": "rm -rf dist && tsc --rootDir src",
     "prelint": "prettier --write \"{src,test,scripts,jest}/**/*.{ts,js}\"",
-    "lint": "tslint \"src/**/*.ts\" &&  \"test/**/*.spec.ts\"",
+    "lint": "tslint \"{test,src}/**/*.ts\"",
     "generate-support-info": "node -r ts-node/register scripts/generate-built-ins-support-info.ts",
     "generate-polyfills": "node -r ts-node/register scripts/generate-polyfills.ts"
   },

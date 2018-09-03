@@ -35,7 +35,7 @@ test(`transformer with ts-loader`, () => {
         const output: string = stats
             .toJson()
             .modules[0].source.replace(/\\n/g, '\n')
-            .replace(/\\"/g, '\'');
+            .replace(/\\"/g, `'`);
 
         expect(output).toContainPolyfillImport('core-js/modules/es6.array.from.js');
         expect(output).toContainPolyfillImport('core-js/modules/es6.array.find.js');
