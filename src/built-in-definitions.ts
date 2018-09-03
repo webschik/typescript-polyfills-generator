@@ -10,6 +10,7 @@ export interface GroupDefinitions {
 }
 
 export const builtIns: Definitions = {
+    fetch: ['es6.fetch'],
     DataView: ['es6.typed.data-view'],
     Float32Array: ['es6.typed.float32-array'],
     Float64Array: ['es6.typed.float64-array'],

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --no-cache",
     "build": "rm -rf dist && tsc",
-    "prelint": "prettier --write \"{src,test}/**/*.ts\"",
+    "prelint": "prettier --write \"{src,test,scripts}/**/*.{ts,js}\"",
     "lint": "tslint \"src/**/*.ts\" &&  \"test/**/*.spec.ts\""
   },
   "repository": {
@@ -34,6 +34,7 @@
     "@types/node": "^10.5.7",
     "@types/semver": "^5.5.0",
     "awesome-typescript-loader": "^5.2.0",
+    "core-js": "^2.5.7",
     "jest": "^23.5.0",
     "memory-fs": "^0.4.1",
     "prettier": "^1.14.2",
