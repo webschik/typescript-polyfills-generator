@@ -42,6 +42,7 @@
     "electron-to-chromium": "^1.3.62",
     "husky": "^1.0.0-rc.13",
     "jest": "^23.5.0",
+    "jest-coverage-processor": "^1.0.0",
     "lint-staged": "^7.2.2",
     "lodash": "^4.17.10",
     "memory-fs": "^0.4.1",
@@ -72,6 +73,14 @@
       "lcov",
       "html"
     ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 95.73,
+        "branches": 77.97,
+        "functions": 100,
+        "lines": 95.41
+      }
+    },
     "collectCoverageFrom": [
       "src/*.ts",
       "src/**/*.ts",
@@ -86,6 +95,7 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "setupTestFrameworkScriptFile": "<rootDir>/jest/config.js",
+    "testResultsProcessor": "<rootDir>/jest/test-results-processor.js",
     "testRegex": "(/test/.*|\\.(test|spec))\\.ts$",
     "moduleFileExtensions": [
       "ts",
