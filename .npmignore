@@ -1,5 +1,6 @@
 *
-!dist
+!lib
+!data
 !npm-shrinkwrap.json
 !package.json
 !LICENSE
