@@ -1,6 +1,6 @@
 import {builtIns, staticMethods, instanceMethods} from '../src/built-in-definitions';
 
-const allBuiltInsWithEsVersion = require('../data/built-ins.json');
+const allBuiltInsWithSupportInfo = require('../data/built-ins.json');
 const allPolyfills = require('../data/polyfills.json');
 
 function testPolyfills(polyfills: string[]) {
@@ -8,7 +8,7 @@ function testPolyfills(polyfills: string[]) {
 
     polyfills.forEach((polyfill) => {
         test(`${polyfill} should have env. support info`, () => {
-            expect(allBuiltInsWithEsVersion[polyfill]).toBeDefined();
+            expect(allBuiltInsWithSupportInfo[polyfill]).toBeDefined();
         });
         test(`${polyfill} should have polyfill`, () => {
             expect(allPolyfills[polyfill]).toBeDefined();

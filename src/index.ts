@@ -3,14 +3,14 @@ import * as browserslist from 'browserslist';
 import * as ts from 'typescript';
 import semverify, {firstVersion} from './semverify';
 
-interface BrowsersSupportList {
+interface EnvSupportInfo {
     // [browser name]: version
     [key: string]: string;
 }
 
 interface BuiltInsList {
     // [name]:
-    [key: string]: BrowsersSupportList;
+    [key: string]: EnvSupportInfo;
 }
 
 export type PolyfillStatusOrModuleName = boolean | string;
@@ -25,32 +25,14 @@ export interface PolyfillsGeneratorOptions {
 }
 
 const {hasOwnProperty} = Object.prototype;
-const allBuiltInsWithEsVersion: BuiltInsList = require('../data/built-ins.json');
+const allBuiltIns: BuiltInsList = require('../data/built-ins.json');
 const allPolyfills: PolyfillsList = require('../data/polyfills.json');
 const allVersionsKey: string = 'all';
-const allBuiltIns: BuiltInsList = Object.create(null);
 const browserNameMap: {[key: string]: string} = {
     and_chr: 'chrome',
     and_ff: 'firefox',
     ios_saf: 'ios'
 };
-
-for (const builtIn in allBuiltInsWithEsVersion) {
-    if (hasOwnProperty.call(allBuiltInsWithEsVersion, builtIn)) {
-        const browsersList: BrowsersSupportList = allBuiltInsWithEsVersion[builtIn];
-        const normalizedBrowsersList: BrowsersSupportList = Object.create(null);
-
-        for (const browserName in browsersList) {
-            if (hasOwnProperty.call(browsersList, browserName)) {
-                const browserVersion: string = browsersList[browserName];
-
-                normalizedBrowsersList[browserName] = semverify(browserVersion);
-            }
-        }
-
-        allBuiltIns[builtIn] = normalizedBrowsersList;
-    }
-}
 
 export function createPolyfillsTransformerFactory(
     program: ts.Program,

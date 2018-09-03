@@ -31,76 +31,78 @@ export const builtIns: Definitions = {
     WeakSet: ['es6.weak-set'].concat(commonIterators)
 };
 
-export const instanceMethods: GroupDefinitions = {
-    Object: {
-        __defineGetter__: ['es7.object.define-getter'],
-        __defineSetter__: ['es7.object.define-setter'],
-        __lookupGetter__: ['es7.object.lookup-getter'],
-        __lookupSetter__: ['es7.object.lookup-setter']
-    },
-    String: {
-        anchor: ['es6.string.anchor'],
-        big: ['es6.string.big'],
-        blink: ['es6.string.blink'],
-        bold: ['es6.string.bold'],
-        codePointAt: ['es6.string.code-point-at'],
-        endsWith: ['es6.string.ends-with'],
-        fixed: ['es6.string.fixed'],
-        fontcolor: ['es6.string.fontcolor'],
-        fontsize: ['es6.string.fontsize'],
-        includes: ['es6.string.includes'],
-        italics: ['es6.string.italics'],
-        link: ['es6.string.link'],
-        padStart: ['es7.string.pad-start'],
-        padEnd: ['es7.string.pad-end'],
-        repeat: ['es6.string.repeat'],
-        small: ['es6.string.small'],
-        startsWith: ['es6.string.starts-with'],
-        strike: ['es6.string.strike'],
-        sub: ['es6.string.sub'],
-        trim: ['es6.string.trim']
-    },
-    Array: {
-        copyWithin: ['es6.array.copy-within'],
-        entries: arrayNatureIterators,
-        every: ['es6.array.is-array'],
-        fill: ['es6.array.fill'],
-        filter: ['es6.array.filter'],
-        find: ['es6.array.find'],
-        findIndex: ['es6.array.find-index'],
-        forEach: ['es6.array.for-each'],
-        includes: ['es7.array.includes'],
-        indexOf: ['es6.array.index-of'],
-        keys: arrayNatureIterators,
-        lastIndexOf: ['es6.array.last-index-of'],
-        map: ['es6.array.map'],
-        reduce: ['es6.array.reduce'],
-        reduceRight: ['es6.array.reduce-right'],
-        slice: ['es6.array.slice'],
-        some: ['es6.array.some'],
-        sort: ['es6.array.sort'],
-        values: arrayNatureIterators
-    },
-    Function: {
-        bind: ['es6.function.bind'],
-        name: ['es6.function.name']
-    },
-    Promise: {
-        finally: ['es7.promise.finally']
-    },
-    RegExp: {
-        flags: ['es6.regexp.flags'],
-        match: ['es6.regexp.match'],
-        replace: ['es6.regexp.replace'],
-        search: ['es6.regexp.search'],
-        split: ['es6.regexp.split'],
-        toString: ['es6.regexp.to-string']
-    },
-    Date: {
-        toISOString: ['es6.date.to-iso-string'],
-        toJSON: ['es6.date.to-json'],
-        toString: ['es6.date.to-string']
-    }
+export const instanceMethods: Definitions = {
+    // Object
+    __defineGetter__: ['es7.object.define-getter'],
+    __defineSetter__: ['es7.object.define-setter'],
+    __lookupGetter__: ['es7.object.lookup-getter'],
+    __lookupSetter__: ['es7.object.lookup-setter'],
+
+    // String
+    anchor: ['es6.string.anchor'],
+    big: ['es6.string.big'],
+    blink: ['es6.string.blink'],
+    bold: ['es6.string.bold'],
+    codePointAt: ['es6.string.code-point-at'],
+    endsWith: ['es6.string.ends-with'],
+    fixed: ['es6.string.fixed'],
+    fontcolor: ['es6.string.fontcolor'],
+    fontsize: ['es6.string.fontsize'],
+
+    italics: ['es6.string.italics'],
+    link: ['es6.string.link'],
+    padStart: ['es7.string.pad-start'],
+    padEnd: ['es7.string.pad-end'],
+    repeat: ['es6.string.repeat'],
+    small: ['es6.string.small'],
+    startsWith: ['es6.string.starts-with'],
+    strike: ['es6.string.strike'],
+    sub: ['es6.string.sub'],
+    trim: ['es6.string.trim'],
+
+    // Array
+    copyWithin: ['es6.array.copy-within'],
+    entries: arrayNatureIterators,
+    every: ['es6.array.is-array'],
+    fill: ['es6.array.fill'],
+    filter: ['es6.array.filter'],
+    find: ['es6.array.find'],
+    findIndex: ['es6.array.find-index'],
+    forEach: ['es6.array.for-each'],
+    indexOf: ['es6.array.index-of'],
+    keys: arrayNatureIterators,
+    lastIndexOf: ['es6.array.last-index-of'],
+    map: ['es6.array.map'],
+    reduce: ['es6.array.reduce'],
+    reduceRight: ['es6.array.reduce-right'],
+    slice: ['es6.array.slice'],
+    some: ['es6.array.some'],
+    sort: ['es6.array.sort'],
+    values: arrayNatureIterators,
+
+    // String & Array
+    includes: ['es6.string.includes', 'es7.array.includes'],
+
+    // Function
+    bind: ['es6.function.bind'],
+    name: ['es6.function.name'],
+
+    // Promise
+    finally: ['es7.promise.finally'],
+
+    // RegExp
+    flags: ['es6.regexp.flags'],
+    match: ['es6.regexp.match'],
+    replace: ['es6.regexp.replace'],
+    search: ['es6.regexp.search'],
+    split: ['es6.regexp.split'],
+
+    // Date
+    toISOString: ['es6.date.to-iso-string'],
+    toJSON: ['es6.date.to-json'],
+
+    // Date & RegExp
+    toString: ['es6.date.to-string', 'es6.regexp.to-string']
 };
 
 export const staticMethods: GroupDefinitions = {
