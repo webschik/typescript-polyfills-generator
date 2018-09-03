@@ -155,8 +155,31 @@ const builtInsSupportInfo = {
         ios: '10.0.0',
         safari: '10.0.0',
         electron: chromiumToElectron('42')
+    },
+    'es5.location.origin': {
+        chrome: '1.0.0',
+        edge: '12.0.0',
+        opera: '29.0.0',
+        firefox: '26.0.0',
+        android: '1.0.0',
+        ios: '1.0.0',
+        safari: '1.0.0',
+        electron: chromiumToElectron('1')
+    },
+    'es5.array.unshift': {
+        chrome: '1.0.0',
+        edge: '12.0.0',
+        opera: '1.0.0',
+        ie: '5.5.0',
+        firefox: '4.0.0',
+        android: '1.0.0',
+        ios: '11.0.0',
+        safari: '11.0.0',
+        electron: chromiumToElectron('1')
     }
 };
+
+builtInsSupportInfo['es5.array.shift'] = builtInsSupportInfo['es5.array.unshift'];
 
 for (const feature in builtInsSupportInfo) {
     if (Object.prototype.hasOwnProperty.call(builtInsSupportInfo, feature)) {

@@ -48,7 +48,6 @@ export const instanceMethods: Definitions = {
     fixed: ['es6.string.fixed'],
     fontcolor: ['es6.string.fontcolor'],
     fontsize: ['es6.string.fontsize'],
-
     italics: ['es6.string.italics'],
     link: ['es6.string.link'],
     padStart: ['es7.string.pad-start'],
@@ -78,6 +77,9 @@ export const instanceMethods: Definitions = {
     slice: ['es6.array.slice'],
     some: ['es6.array.some'],
     sort: ['es6.array.sort'],
+    shift: ['es5.array.shift'],
+    unshift: ['es5.array.unshift'],
+    origin: ['es5.location.origin'],
     values: arrayNatureIterators,
 
     // String & Array

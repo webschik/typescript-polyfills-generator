@@ -17,11 +17,12 @@
     "pretty": true,
     "removeComments": true,
     "lib": [
-      "es2018",
+      "esnext",
       "dom"
     ]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "test"
   ]
 }

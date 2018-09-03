@@ -32,14 +32,7 @@ describe('support info & polyfills for instanceMethods definitions', () => {
     test('builtIns exist', () => expect(builtInsNames.length).toBeGreaterThan(0));
 
     builtInsNames.forEach((name) => {
-        describe(name, () => {
-            const definitions: {[key: string]: string[]} = instanceMethods[name];
-            const instanceMethodNames: string[] = Object.keys(definitions);
-
-            test('definitions exist', () => expect(instanceMethodNames.length).toBeGreaterThan(0));
-
-            instanceMethodNames.forEach((instanceMethod) => testPolyfills(definitions[instanceMethod]));
-        });
+        describe(name, () => testPolyfills(instanceMethods[name]));
     });
 });
 
