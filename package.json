@@ -2,10 +2,10 @@
   "name": "ts-polyfill-loader",
   "version": "0.1.0",
   "description": "Polyfills generator for a full ES2015+ environment support in TypeScript projects",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest --no-cache",
-    "build": "rm -rf dist && tsc --rootDir src",
+    "build": "rm -rf lib && tsc --rootDir src",
     "prelint": "prettier --write \"{src,test,scripts,jest}/**/*.{ts,js}\"",
     "lint": "tslint \"{test,src}/**/*.ts\"",
     "generate-support-info": "node -r ts-node/register scripts/generate-built-ins-support-info.ts",
