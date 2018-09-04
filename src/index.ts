@@ -41,6 +41,9 @@ const browserNameMap: {[key: string]: string} = {
     ios_saf: 'ios'
 };
 const isString = (value: any) => Object.prototype.toString.call(value) === '[object String]';
+const getFromDefinitions = <T>(definitions: {[key: string]: any}, prop: string): T => {
+    return hasOwnProperty.call(definitions, prop) ? definitions[prop] : undefined;
+};
 
 export function createPolyfillsTransformerFactory(
     options: PolyfillsGeneratorOptions = {}
@@ -123,9 +126,11 @@ export function createPolyfillsTransformerFactory(
                     const {initializer, name} = node as ts.VariableDeclaration;
                     const {elements} = name as ts.ObjectBindingPattern;
                     const builtInName: string | void = initializer && (initializer as AstNodeWithText).text;
-                    const builtInsFeatures: string[] = definitions.builtIns[builtInName as string];
-                    const staticMethodsDefinitions: Definitions | void =
-                        definitions.staticMethods[builtInName as string];
+                    const builtInsFeatures = getFromDefinitions<string[]>(definitions.builtIns, builtInName as string);
+                    const staticMethodsDefinitions = getFromDefinitions<Definitions>(
+                        definitions.staticMethods,
+                        builtInName as string
+                    );
 
                     // e.g., const request = fetch;
                     if (builtInsFeatures) {
@@ -155,7 +160,8 @@ export function createPolyfillsTransformerFactory(
                 case ts.SyntaxKind.CallExpression:
                 case ts.SyntaxKind.NewExpression: {
                     const {expression} = node as ts.NewExpression & ts.CallExpression;
-                    const features: string[] = definitions.builtIns[(expression as AstNodeWithText).text as string];
+                    const features = getFromDefinitions<string[]>(definitions.builtIns, (expression as AstNodeWithText)
+                        .text as string);
 
                     // Symbol()
                     // fetch(..)
@@ -170,7 +176,7 @@ export function createPolyfillsTransformerFactory(
                     const {expression, name} = node as ts.PropertyAccessExpression;
                     const builtInName: string = (expression as AstNodeWithText).text as string;
                     const methodName: string = (name as AstNodeWithText).text as string;
-                    const instanceFeatures: string[] = definitions.instanceMethods[methodName];
+                    const instanceFeatures = getFromDefinitions<string[]>(definitions.instanceMethods, methodName);
 
                     // 'test'.padStart()
                     // fn.bind(...)
@@ -178,7 +184,10 @@ export function createPolyfillsTransformerFactory(
                         addPolyfillImports(instanceFeatures);
                     }
 
-                    const staticMethodsDefinitions: Definitions = definitions.staticMethods[builtInName];
+                    const staticMethodsDefinitions = getFromDefinitions<Definitions>(
+                        definitions.staticMethods,
+                        builtInName
+                    );
                     const staticFeatures: string[] = staticMethodsDefinitions && staticMethodsDefinitions[methodName];
 
                     // Array.from(...)
