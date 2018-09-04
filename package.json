@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest --no-cache",
+    "prepublish": "npm run build",
     "build": "rm -rf lib && tsc --rootDir src",
     "prelint": "prettier --write \"{src,test,scripts,jest}/**/*.{ts,js}\"",
     "lint": "tslint \"{test,src}/**/*.ts\"",
