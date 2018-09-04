@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transformer with ts-loader 1`] = `
+"module.exports = \\"'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+require('core-js/modules/es6.array.find-index.js');
+require('core-js/modules/es6.array.find.js');
+require('core-js/modules/es6.array.from.js');
+require('core-js/modules/es6.array.iterator.js');
+require('core-js/modules/es6.number.constructor.js');
+require('core-js/modules/es6.number.is-nan.js');
+require('core-js/modules/es6.object.assign.js');
+require('core-js/modules/es6.promise.js');
+require('core-js/modules/es6.set.js');
+require('core-js/modules/es6.string.includes.js');
+require('core-js/modules/es6.string.iterator.js');
+require('core-js/modules/es7.array.includes.js');
+require('core-js/modules/es7.string.pad-end.js');
+require('core-js/modules/es7.string.pad-start.js');
+require('typescript-polyfills-generator/lib/polyfills/es5.array.unshift.js');
+require('typescript-polyfills-generator/lib/polyfills/es5.location.origin.js');
+require('whatwg-fetch');
+exports.elementInArray = [1, '2', 3, null].find((value) => value === 3);
+exports.elementIndexInArray = [1, '2', 3, null].findIndex((value) => value === '2');
+exports.hasTwoInArray = [1, '2', 3, null].includes('2');
+exports.hasTwoInString = '123'.includes('2');
+exports.paddedStartNumber = '9'.padStart(2, '0');
+exports.paddedEndNumber = '2'.padEnd(3, '0');
+exports.arrayFromString = Array.from('foo');
+exports.fulfilledPromise = Promise.resolve({});
+const { isNaN } = Number;
+const { invalidMethod } = Array;
+exports.isNotGlobalNaN = isNaN;
+Object.assign({}, { value: 1 });
+exports.request = fetch;
+exports.locationOrigin = location.origin;
+const testArr = [0, 2147483648];
+testArr.shift();
+testArr[1] = 1;
+exports.testSet = new Set();
+\\""
+`;
+
+exports[`transformer with ts-loader with no polyfills in the output 1`] = `
+"module.exports = \\"'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+exports.elementInArray = [1, '2', 3, null].find((value) => value === 3);
+exports.elementIndexInArray = [1, '2', 3, null].findIndex((value) => value === '2');
+exports.hasTwoInArray = [1, '2', 3, null].includes('2');
+exports.hasTwoInString = '123'.includes('2');
+exports.paddedStartNumber = '9'.padStart(2, '0');
+exports.paddedEndNumber = '2'.padEnd(3, '0');
+exports.arrayFromString = Array.from('foo');
+exports.fulfilledPromise = Promise.resolve({});
+const { isNaN } = Number;
+const { invalidMethod } = Array;
+exports.isNotGlobalNaN = isNaN;
+Object.assign({}, { value: 1 });
+exports.request = fetch;
+exports.locationOrigin = location.origin;
+const testArr = [0, 2147483648];
+testArr.shift();
+testArr[1] = 1;
+exports.testSet = new Set();
+\\""
+`;

@@ -1,0 +1,1275 @@
+{
+  "es6.fetch": {
+    "chrome": "42.0.0",
+    "edge": "14.0.0",
+    "opera": "29.0.0",
+    "firefox": "39.0.0",
+    "ios": "10.0.0",
+    "safari": "10.0.0",
+    "electron": "0.27.0"
+  },
+  "es5.location.origin": {
+    "chrome": "1.0.0",
+    "edge": "12.0.0",
+    "opera": "29.0.0",
+    "firefox": "26.0.0",
+    "android": "1.0.0",
+    "ios": "1.0.0",
+    "safari": "1.0.0",
+    "electron": "0.2.0"
+  },
+  "es5.array.unshift": {
+    "chrome": "1.0.0",
+    "edge": "12.0.0",
+    "opera": "1.0.0",
+    "ie": "5.5.0",
+    "firefox": "4.0.0",
+    "android": "1.0.0",
+    "ios": "11.0.0",
+    "safari": "11.0.0",
+    "electron": "0.2.0"
+  },
+  "es5.array.shift": {
+    "chrome": "1.0.0",
+    "edge": "12.0.0",
+    "opera": "1.0.0",
+    "ie": "5.5.0",
+    "firefox": "4.0.0",
+    "android": "1.0.0",
+    "ios": "11.0.0",
+    "safari": "11.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.array.copy-within": {
+    "chrome": "45.0.0",
+    "edge": "12.0.0",
+    "firefox": "32.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "32.0.0",
+    "electron": "0.35.0"
+  },
+  "es6.array.every": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.fill": {
+    "chrome": "45.0.0",
+    "edge": "12.0.0",
+    "firefox": "31.0.0",
+    "safari": "7.1.0",
+    "node": "4.0.0",
+    "opera": "32.0.0",
+    "electron": "0.35.0"
+  },
+  "es6.array.filter": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.find": {
+    "chrome": "45.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "4.0.0",
+    "opera": "32.0.0",
+    "electron": "0.35.0"
+  },
+  "es6.array.find-index": {
+    "chrome": "45.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "4.0.0",
+    "opera": "32.0.0",
+    "electron": "0.35.0"
+  },
+  "es6.array.for-each": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.from": {
+    "chrome": "51.0.0",
+    "edge": "15.0.0",
+    "firefox": "36.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.array.index-of": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.is-array": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "4.0.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.iterator": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "28.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.array.last-index-of": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.map": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.of": {
+    "chrome": "45.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "32.0.0",
+    "electron": "0.35.0"
+  },
+  "es6.array.reduce": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "3.0.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.reduce-right": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "3.0.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.slice": {
+    "chrome": "51.0.0",
+    "edge": "13.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.array.some": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.sort": {
+    "chrome": "63.0.0",
+    "opera": "50.0.0",
+    "firefox": "5.0.0",
+    "safari": "10.1.0",
+    "ie": "9.0.0",
+    "electron": "3.0.0",
+    "edge": "12.0.0"
+  },
+  "es6.array.species": {
+    "chrome": "51.0.0",
+    "edge": "13.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.date.now": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.date.to-iso-string": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "3.5.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.date.to-json": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "4.0.0",
+    "safari": "10.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.date.to-primitive": {
+    "chrome": "47.0.0",
+    "edge": "15.0.0",
+    "firefox": "44.0.0",
+    "safari": "10.0.0",
+    "opera": "34.0.0",
+    "electron": "0.36.0"
+  },
+  "es6.date.to-string": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "node": "0.12.0",
+    "ie": "10.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.function.bind": {
+    "chrome": "7.0.0",
+    "opera": "12.0.0",
+    "firefox": "4.0.0",
+    "safari": "5.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "ios": "7.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.function.has-instance": {
+    "chrome": "51.0.0",
+    "edge": "15.0.0",
+    "firefox": "50.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.function.name": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "edge": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "4.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.map": {
+    "chrome": "51.0.0",
+    "firefox": "53.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.math.acosh": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.asinh": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.atanh": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.cbrt": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.clz32": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "31.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.cosh": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.expm1": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.fround": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "26.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.hypot": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "27.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.imul": {
+    "chrome": "30.0.0",
+    "edge": "12.0.0",
+    "firefox": "23.0.0",
+    "safari": "7.0.0",
+    "node": "0.12.0",
+    "opera": "17.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.log10": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.log1p": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.log2": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.sign": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.sinh": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.tanh": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.math.trunc": {
+    "chrome": "38.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "7.1.0",
+    "node": "0.12.0",
+    "opera": "25.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.constructor": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "36.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.number.epsilon": {
+    "chrome": "34.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.is-finite": {
+    "chrome": "19.0.0",
+    "edge": "12.0.0",
+    "firefox": "16.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "android": "4.1.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.is-integer": {
+    "chrome": "34.0.0",
+    "edge": "12.0.0",
+    "firefox": "16.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.is-nan": {
+    "chrome": "19.0.0",
+    "edge": "12.0.0",
+    "firefox": "15.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "android": "4.1.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.is-safe-integer": {
+    "chrome": "34.0.0",
+    "edge": "12.0.0",
+    "firefox": "32.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.max-safe-integer": {
+    "chrome": "34.0.0",
+    "edge": "12.0.0",
+    "firefox": "31.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.min-safe-integer": {
+    "chrome": "34.0.0",
+    "edge": "12.0.0",
+    "firefox": "31.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.parse-float": {
+    "chrome": "34.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.number.parse-int": {
+    "chrome": "34.0.0",
+    "edge": "12.0.0",
+    "firefox": "25.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.object.assign": {
+    "chrome": "49.0.0",
+    "edge": "13.0.0",
+    "firefox": "36.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.object.create": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "4.0.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.object.define-properties": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "4.0.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.object.define-property": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "4.0.0",
+    "safari": "5.1.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.object.freeze": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.get-own-property-descriptor": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.get-own-property-names": {
+    "chrome": "40.0.0",
+    "edge": "12.0.0",
+    "firefox": "33.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "27.0.0",
+    "electron": "0.21.0"
+  },
+  "es6.object.get-prototype-of": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "3.5.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.is": {
+    "chrome": "19.0.0",
+    "firefox": "22.0.0",
+    "safari": "9.0.0",
+    "android": "4.1.0",
+    "electron": "0.2.0"
+  },
+  "es6.object.is-extensible": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.is-frozen": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.is-sealed": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.keys": {
+    "chrome": "40.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "27.0.0",
+    "electron": "0.21.0"
+  },
+  "es6.object.prevent-extensions": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.seal": {
+    "chrome": "44.0.0",
+    "edge": "12.0.0",
+    "firefox": "35.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "31.0.0",
+    "electron": "0.31.0"
+  },
+  "es6.object.set-prototype-of": {
+    "chrome": "34.0.0",
+    "firefox": "31.0.0",
+    "safari": "9.0.0",
+    "node": "0.12.0",
+    "ie": "11.0.0",
+    "opera": "21.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.promise": {
+    "chrome": "51.0.0",
+    "edge": "14.0.0",
+    "firefox": "45.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.reflect.apply": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.construct": {
+    "chrome": "49.0.0",
+    "edge": "13.0.0",
+    "firefox": "45.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.define-property": {
+    "chrome": "49.0.0",
+    "edge": "13.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.delete-property": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.get": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.get-own-property-descriptor": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.get-prototype-of": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.has": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.is-extensible": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.own-keys": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.prevent-extensions": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.set": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.reflect.set-prototype-of": {
+    "chrome": "49.0.0",
+    "edge": "12.0.0",
+    "firefox": "42.0.0",
+    "safari": "10.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.regexp.constructor": {
+    "chrome": "50.0.0",
+    "firefox": "40.0.0",
+    "safari": "10.0.0",
+    "opera": "37.0.0",
+    "electron": "1.1.0"
+  },
+  "es6.regexp.flags": {
+    "chrome": "49.0.0",
+    "firefox": "37.0.0",
+    "safari": "9.0.0",
+    "opera": "36.0.0",
+    "electron": "1.0.0"
+  },
+  "es6.regexp.match": {
+    "chrome": "50.0.0",
+    "firefox": "49.0.0",
+    "safari": "10.0.0",
+    "opera": "37.0.0",
+    "electron": "1.1.0"
+  },
+  "es6.regexp.replace": {
+    "chrome": "50.0.0",
+    "firefox": "49.0.0",
+    "safari": "10.0.0",
+    "opera": "37.0.0",
+    "electron": "1.1.0"
+  },
+  "es6.regexp.search": {
+    "chrome": "50.0.0",
+    "firefox": "49.0.0",
+    "safari": "10.0.0",
+    "opera": "37.0.0",
+    "electron": "1.1.0"
+  },
+  "es6.regexp.split": {
+    "chrome": "50.0.0",
+    "firefox": "49.0.0",
+    "safari": "10.0.0",
+    "opera": "37.0.0",
+    "electron": "1.1.0"
+  },
+  "es6.regexp.to-string": {
+    "chrome": "50.0.0",
+    "firefox": "39.0.0",
+    "safari": "10.0.0",
+    "opera": "37.0.0",
+    "electron": "1.1.0"
+  },
+  "es6.set": {
+    "chrome": "51.0.0",
+    "firefox": "53.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.string.anchor": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.big": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.blink": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.bold": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.code-point-at": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "29.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.string.ends-with": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "29.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.string.fixed": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.fontcolor": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.fontsize": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.from-code-point": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "29.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.string.includes": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "40.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.string.italics": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.iterator": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "2.0.0",
+    "safari": "3.1.0",
+    "ie": "8.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.string.link": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.raw": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "34.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.string.repeat": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "24.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.string.small": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.starts-with": {
+    "chrome": "41.0.0",
+    "edge": "12.0.0",
+    "firefox": "29.0.0",
+    "safari": "9.0.0",
+    "node": "4.0.0",
+    "opera": "28.0.0",
+    "electron": "0.24.0"
+  },
+  "es6.string.strike": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.sub": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.sup": {
+    "chrome": "5.0.0",
+    "firefox": "17.0.0",
+    "safari": "6.0.0",
+    "node": "0.12.0",
+    "android": "4.0.0",
+    "opera": "12.0.0",
+    "electron": "0.2.0"
+  },
+  "es6.string.trim": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "3.5.0",
+    "safari": "4.0.0",
+    "ie": "9.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.symbol": {
+    "chrome": "51.0.0",
+    "firefox": "51.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.array-buffer": {
+    "chrome": "51.0.0",
+    "edge": "13.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.data-view": {
+    "chrome": "5.0.0",
+    "opera": "12.0.0",
+    "firefox": "15.0.0",
+    "safari": "5.1.0",
+    "node": "0.12.0",
+    "ie": "10.0.0",
+    "android": "4.0.0",
+    "electron": "0.2.0",
+    "edge": "12.0.0"
+  },
+  "es6.typed.float32-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.float64-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.int16-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.int32-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.int8-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.uint16-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.uint32-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.uint8-array": {
+    "chrome": "51.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.typed.uint8-clamped-array": {
+    "chrome": "51.0.0",
+    "edge": "13.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.weak-map": {
+    "chrome": "51.0.0",
+    "firefox": "53.0.0",
+    "safari": "9.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es6.weak-set": {
+    "chrome": "51.0.0",
+    "edge": "15.0.0",
+    "firefox": "53.0.0",
+    "safari": "9.0.0",
+    "opera": "38.0.0",
+    "electron": "1.2.0"
+  },
+  "es7.array.flat-map": {
+    "chrome": "69.0.0",
+    "firefox": "62.0.0",
+    "safari": "12.0.0",
+    "opera": "56.0.0"
+  },
+  "es7.array.includes": {
+    "chrome": "47.0.0",
+    "edge": "14.0.0",
+    "firefox": "43.0.0",
+    "safari": "10.0.0",
+    "opera": "34.0.0",
+    "electron": "0.36.0"
+  },
+  "es7.object.define-getter": {
+    "chrome": "62.0.0",
+    "firefox": "48.0.0",
+    "safari": "9.0.0",
+    "opera": "49.0.0",
+    "electron": "3.0.0"
+  },
+  "es7.object.define-setter": {
+    "chrome": "62.0.0",
+    "firefox": "48.0.0",
+    "safari": "9.0.0",
+    "opera": "49.0.0",
+    "electron": "3.0.0"
+  },
+  "es7.object.entries": {
+    "chrome": "54.0.0",
+    "edge": "14.0.0",
+    "firefox": "47.0.0",
+    "safari": "10.1.0",
+    "opera": "41.0.0",
+    "electron": "1.5.0"
+  },
+  "es7.object.get-own-property-descriptors": {
+    "chrome": "54.0.0",
+    "edge": "15.0.0",
+    "firefox": "50.0.0",
+    "safari": "10.1.0",
+    "opera": "41.0.0",
+    "electron": "1.5.0"
+  },
+  "es7.object.lookup-getter": {
+    "chrome": "62.0.0",
+    "firefox": "36.0.0",
+    "safari": "9.0.0",
+    "opera": "49.0.0",
+    "electron": "3.0.0"
+  },
+  "es7.object.lookup-setter": {
+    "chrome": "62.0.0",
+    "firefox": "36.0.0",
+    "safari": "9.0.0",
+    "opera": "49.0.0",
+    "electron": "3.0.0"
+  },
+  "es7.object.values": {
+    "chrome": "54.0.0",
+    "edge": "14.0.0",
+    "firefox": "47.0.0",
+    "safari": "10.1.0",
+    "opera": "41.0.0",
+    "electron": "1.5.0"
+  },
+  "es7.promise.finally": {
+    "chrome": "63.0.0",
+    "edge": "18.0.0",
+    "firefox": "58.0.0",
+    "safari": "11.1.0",
+    "opera": "50.0.0",
+    "electron": "3.0.0"
+  },
+  "es7.string.pad-end": {
+    "chrome": "57.0.0",
+    "edge": "15.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "node": "8.0.0",
+    "opera": "44.0.0",
+    "electron": "1.7.0"
+  },
+  "es7.string.pad-start": {
+    "chrome": "57.0.0",
+    "edge": "15.0.0",
+    "firefox": "48.0.0",
+    "safari": "10.0.0",
+    "node": "8.0.0",
+    "opera": "44.0.0",
+    "electron": "1.7.0"
+  },
+  "es7.symbol.async-iterator": {
+    "chrome": "63.0.0",
+    "firefox": "57.0.0",
+    "safari": "12.0.0",
+    "opera": "50.0.0",
+    "electron": "3.0.0"
+  }
+}

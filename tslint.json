@@ -1,0 +1,7 @@
+{
+  "extends": "tslint-config-webschik",
+  "rules": {
+    "space-before-function-paren": false,
+    "no-console": false
+  }
+}
