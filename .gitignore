@@ -1,5 +1,6 @@
 .idea
 .vscode
+.coveralls.yml
 node_modules
 coverage
 lib

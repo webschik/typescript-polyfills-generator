@@ -1,10 +1,11 @@
 {
-  "name": "ts-polyfill-loader",
+  "name": "typescript-polyfills-generator",
   "version": "0.1.0",
   "description": "Polyfills generator for a full ES2015+ environment support in TypeScript projects",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest --no-cache",
+    "coveralls": "npm run test && cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js",
     "prepublish": "npm run build",
     "build": "rm -rf lib && tsc --rootDir src",
     "prelint": "prettier --write \"{src,test,scripts,jest}/**/*.{ts,js}\"",
@@ -40,6 +41,7 @@
     "awesome-typescript-loader": "^5.2.0",
     "compat-table": "github:kangax/compat-table",
     "core-js": "^2.5.7",
+    "coveralls": "^3.0.2",
     "electron-to-chromium": "^1.3.62",
     "husky": "^1.0.0-rc.13",
     "jest": "^23.5.0",
