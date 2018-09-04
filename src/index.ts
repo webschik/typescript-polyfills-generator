@@ -20,7 +20,7 @@ interface AstNodeWithText extends ts.Node {
     text?: string;
 }
 
-export type PolyfillStatusOrModuleName = false | string;
+export type PolyfillStatusOrModuleName = boolean | string;
 
 export interface PolyfillsList {
     [key: string]: PolyfillStatusOrModuleName;
@@ -32,8 +32,6 @@ export interface PolyfillsGeneratorOptions {
 }
 
 const {hasOwnProperty} = Object.prototype;
-const fetchBuiltInFeature: string = 'es6.fetch';
-const promiseBuiltInFeature: string = 'es6.promise';
 const allBuiltIns: BuiltInsList = require('../data/built-ins.json');
 const allPolyfills: PolyfillsList = require('../data/polyfills.json');
 const allVersionsKey: string = 'all';
@@ -123,30 +121,32 @@ export function createPolyfillsTransformerFactory(
             switch (node.kind) {
                 case ts.SyntaxKind.VariableDeclaration: {
                     const {initializer, name} = node as ts.VariableDeclaration;
+                    const {elements} = name as ts.ObjectBindingPattern;
                     const builtInName: string | void = initializer && (initializer as AstNodeWithText).text;
+                    const builtInsFeatures: string[] = definitions.builtIns[builtInName as string];
+                    const staticMethodsDefinitions: Definitions | void =
+                        definitions.staticMethods[builtInName as string];
 
-                    if (builtInName === 'fetch') {
-                        addPolyfillImports([fetchBuiltInFeature]);
-                    } else {
-                        const {elements} = name as ts.ObjectBindingPattern;
-                        const staticMethodsDefinitions: Definitions | void =
-                            definitions.staticMethods[builtInName as string];
+                    // e.g., const request = fetch;
+                    if (builtInsFeatures) {
+                        addPolyfillImports(builtInsFeatures);
+                    }
 
-                        if (elements && staticMethodsDefinitions) {
-                            const features: string[] = elements.reduce((result: string[], el: ts.BindingElement) => {
-                                const methodName: string = el.name && ((el.name as AstNodeWithText).text as string);
-                                const staticFeatures: string[] | void = staticMethodsDefinitions[methodName];
+                    // e.g., const {isNaN} = Number;
+                    if (elements && staticMethodsDefinitions) {
+                        const features: string[] = elements.reduce((result: string[], el: ts.BindingElement) => {
+                            const methodName: string = el.name && ((el.name as AstNodeWithText).text as string);
+                            const staticFeatures: string[] | void = staticMethodsDefinitions[methodName];
 
-                                if (staticFeatures) {
-                                    return result.concat(staticFeatures);
-                                }
-
-                                return result;
-                            }, []);
-
-                            if (features[0]) {
-                                addPolyfillImports(features);
+                            if (staticFeatures) {
+                                return result.concat(staticFeatures);
                             }
+
+                            return result;
+                        }, []);
+
+                        if (features[0]) {
+                            addPolyfillImports(features);
                         }
                     }
 
@@ -176,10 +176,6 @@ export function createPolyfillsTransformerFactory(
                     // fn.bind(...)
                     if (instanceFeatures) {
                         addPolyfillImports(instanceFeatures);
-                    }
-
-                    if (builtInName === 'Promise') {
-                        addPolyfillImports([promiseBuiltInFeature]);
                     }
 
                     const staticMethodsDefinitions: Definitions = definitions.staticMethods[builtInName];

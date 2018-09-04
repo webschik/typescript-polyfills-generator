@@ -1,5 +1,6 @@
 const arrayNatureIterators: string[] = ['es6.array.iterator'];
 const commonIterators: string[] = ['es6.string.iterator'].concat(arrayNatureIterators);
+const promiseBuiltInFeature: string[] = ['es6.promise'];
 
 export interface Definitions {
     [key: string]: string[];
@@ -19,7 +20,7 @@ export const builtIns: Definitions = {
     Int32Array: ['es6.typed.int32-array'],
     Map: ['es6.map'].concat(commonIterators),
     Number: ['es6.number.constructor'],
-    Promise: ['es6.promise'],
+    Promise: promiseBuiltInFeature,
     RegExp: ['es6.regexp.constructor'],
     Set: ['es6.set'].concat(commonIterators),
     Symbol: ['es6.symbol', 'es7.symbol.async-iterator'],
@@ -170,7 +171,9 @@ export const staticMethods: GroupDefinitions = {
     },
     Promise: {
         all: commonIterators,
-        race: commonIterators
+        race: commonIterators,
+        resolve: promiseBuiltInFeature,
+        reject: promiseBuiltInFeature
     },
     Reflect: {
         apply: ['es6.reflect.apply'],

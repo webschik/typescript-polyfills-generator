@@ -74,9 +74,44 @@ const path = require('path');
 ```
 
 ## Examples
-Check my [awesome-typescript-loader](test/awesome-typescript-loader.spec.ts) and [ts-loader](test/ts-loader.spec.ts) test cases
-to see how this module works.
+### In
 
+```typescript
+// test1.ts
+const map = new Map();
+```
+
+```typescript
+// test2.ts
+const fetchPromise = fetch('../data.json');
+```
+
+### Out (if environment doesn't support it)
+```typescript
+// test1.ts
+import "core-js/modules/es6.map";
+const map = new Map();
+```
+
+```typescript
+// test2.ts
+import "whatwg-fetch";
+const fetchPromise = fetch('../data.json');
+```
+
+
+Check [awesome-typescript-loader](test/awesome-typescript-loader.spec.ts) and [ts-loader](test/ts-loader.spec.ts) test cases
+to find more examples.
+
+## Polyfills
+All polyfills are imported from [core-js](https://github.com/zloirock/core-js) package, but there are some specific polyfills
+that are not supported by core-js:
+
+* [whatwg-fetch](https://github.com/github/fetch) - [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* *typescript-polyfills-generator/lib/polyfills/es5.array.unshift.js* - [Fixes `Array.prototype.unshift` in Safari](https://github.com/es-shims/es5-shim/issues/449)
+* *typescript-polyfills-generator/lib/polyfills/es5.location.origin.js* - Adds `Location.origin` in IE
+
+**Check the [transfromer options](#options) to see how disable or reassign any polyfill module.**
 
 ## License
 

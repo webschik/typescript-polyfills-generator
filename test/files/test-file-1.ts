@@ -8,6 +8,7 @@ export const arrayFromString: string[] = Array.from('foo');
 export const fulfilledPromise: Promise<object> = Promise.resolve({});
 
 const {isNaN} = Number;
+const {invalidMethod} = Array;
 
 export const isNotGlobalNaN = isNaN;
 
@@ -20,3 +21,5 @@ const testArr: number[] = [0, 2147483648];
 
 testArr.shift();
 testArr[1] = 1;
+
+export const testSet = new Set();

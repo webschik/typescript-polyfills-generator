@@ -1,41 +1,32 @@
-import * as fs from 'fs';
 import * as path from 'path';
-import {promisify} from 'util';
 import {Stats} from 'webpack';
 import {createPolyfillsTransformerFactory} from '../src/index';
 import compile from './helpers/compiler';
-
-const readFile = promisify(fs.readFile);
+import prettifyWebpackOutput from './helpers/prettify-webpack-output';
 
 test(`transformer with ts-loader`, () => {
     const testFilePath: string = path.resolve(__dirname, './files/test-file-1.ts');
 
-    return Promise.all([
-        readFile(testFilePath, 'utf8'),
-        compile(testFilePath, {
-            tsLoaders: [
-                {
-                    loader: 'ts-loader',
-                    options: {
-                        transpileOnly: true,
-                        getCustomTransformers() {
-                            return {
-                                before: [
-                                    createPolyfillsTransformerFactory({
-                                        targets: 'last 2 version, not ie < 11, not ie_mob < 11, safari >= 9'
-                                    })
-                                ]
-                            };
-                        }
+    return compile(testFilePath, {
+        tsLoaders: [
+            {
+                loader: 'ts-loader',
+                options: {
+                    transpileOnly: true,
+                    getCustomTransformers() {
+                        return {
+                            before: [
+                                createPolyfillsTransformerFactory({
+                                    targets: 'last 2 version, not ie < 11, not ie_mob < 11, safari >= 9'
+                                })
+                            ]
+                        };
                     }
                 }
-            ]
-        })
-    ] as any).then(([source, stats]: [string, Stats]) => {
-        const output: string = stats
-            .toJson()
-            .modules[0].source.replace(/\\n/g, '\n')
-            .replace(/\\"/g, `'`);
+            }
+        ]
+    }).then((stats: Stats) => {
+        const output: string = prettifyWebpackOutput(stats.toJson().modules[0].source);
 
         expect(output).toContainPolyfillImport('core-js/modules/es6.array.from.js');
         expect(output).toContainPolyfillImport('core-js/modules/es6.array.find.js');
@@ -50,6 +41,35 @@ test(`transformer with ts-loader`, () => {
         expect(output).toContainPolyfillImport('core-js/modules/es6.number.is-nan.js');
         expect(output).toContainPolyfillImport('typescript-polyfills-generator/lib/polyfills/es5.array.unshift.js');
         expect(output).toContainPolyfillImport('typescript-polyfills-generator/lib/polyfills/es5.location.origin.js');
+        expect(output).toMatchSnapshot();
+    });
+});
+
+test(`transformer with ts-loader with no polyfills in the output`, () => {
+    const testFilePath: string = path.resolve(__dirname, './files/test-file-1.ts');
+
+    return compile(testFilePath, {
+        tsLoaders: [
+            {
+                loader: 'ts-loader',
+                options: {
+                    transpileOnly: true,
+                    getCustomTransformers() {
+                        return {
+                            before: [
+                                createPolyfillsTransformerFactory({
+                                    targets: 'last 1 chrome version'
+                                })
+                            ]
+                        };
+                    }
+                }
+            }
+        ]
+    }).then((stats: Stats) => {
+        const output: string = prettifyWebpackOutput(stats.toJson().modules[0].source);
+
+        expect(output.indexOf('require(')).toBe(-1);
         expect(output).toMatchSnapshot();
     });
 });

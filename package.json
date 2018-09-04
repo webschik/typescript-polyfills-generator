@@ -75,15 +75,16 @@
     ],
     "coverageThreshold": {
       "global": {
-        "statements": 95.45,
-        "branches": 79.03,
+        "statements": 100,
+        "branches": 93.33,
         "functions": 100,
-        "lines": 95.41
+        "lines": 100
       }
     },
     "collectCoverageFrom": [
       "src/*.ts",
       "src/**/*.ts",
+      "!src/polyfills/**/*.ts",
       "!src/*.d.ts"
     ],
     "testPathIgnorePatterns": [
