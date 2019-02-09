@@ -216,7 +216,7 @@
     "firefox": "5.0.0",
     "safari": "10.1.0",
     "ie": "9.0.0",
-    "electron": "3.0.0",
+    "electron": "3.1.0",
     "edge": "12.0.0"
   },
   "es6.array.species": {
@@ -1177,7 +1177,8 @@
     "chrome": "69.0.0",
     "firefox": "62.0.0",
     "safari": "12.0.0",
-    "opera": "56.0.0"
+    "opera": "56.0.0",
+    "electron": "4.0.0"
   },
   "es7.array.includes": {
     "chrome": "47.0.0",
@@ -1192,14 +1193,14 @@
     "firefox": "48.0.0",
     "safari": "9.0.0",
     "opera": "49.0.0",
-    "electron": "3.0.0"
+    "electron": "3.1.0"
   },
   "es7.object.define-setter": {
     "chrome": "62.0.0",
     "firefox": "48.0.0",
     "safari": "9.0.0",
     "opera": "49.0.0",
-    "electron": "3.0.0"
+    "electron": "3.1.0"
   },
   "es7.object.entries": {
     "chrome": "54.0.0",
@@ -1222,14 +1223,14 @@
     "firefox": "36.0.0",
     "safari": "9.0.0",
     "opera": "49.0.0",
-    "electron": "3.0.0"
+    "electron": "3.1.0"
   },
   "es7.object.lookup-setter": {
     "chrome": "62.0.0",
     "firefox": "36.0.0",
     "safari": "9.0.0",
     "opera": "49.0.0",
-    "electron": "3.0.0"
+    "electron": "3.1.0"
   },
   "es7.object.values": {
     "chrome": "54.0.0",
@@ -1245,7 +1246,7 @@
     "firefox": "58.0.0",
     "safari": "11.1.0",
     "opera": "50.0.0",
-    "electron": "3.0.0"
+    "electron": "3.1.0"
   },
   "es7.string.pad-end": {
     "chrome": "57.0.0",
@@ -1270,6 +1271,6 @@
     "firefox": "57.0.0",
     "safari": "12.0.0",
     "opera": "50.0.0",
-    "electron": "3.0.0"
+    "electron": "3.1.0"
   }
 }

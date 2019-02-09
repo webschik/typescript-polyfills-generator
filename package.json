@@ -1,8 +1,11 @@
 {
   "name": "ts-polyfill-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Polyfills generator for a full ES2015+ environment support in TypeScript projects",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "test": "jest --no-cache",
     "prepublish": "npm run build",
@@ -31,37 +34,37 @@
   },
   "homepage": "https://github.com/webschik/ts-polyfill-loader#readme",
   "devDependencies": {
-    "@types/jest": "^23.3.1",
+    "@types/jest": "^23.3.14",
     "@types/loader-utils": "^1.1.3",
-    "@types/lodash": "^4.14.116",
-    "@types/memory-fs": "^0.3.1",
-    "@types/node": "^10.5.7",
+    "@types/lodash": "^4.14.120",
+    "@types/memory-fs": "^0.3.2",
+    "@types/node": "^10.12.24",
     "@types/semver": "^5.5.0",
-    "awesome-typescript-loader": "^5.2.0",
+    "awesome-typescript-loader": "^5.2.1",
     "compat-table": "github:kangax/compat-table",
-    "core-js": "^2.5.7",
+    "core-js": "^2.6.4",
     "electron-to-chromium": "^1.3.62",
-    "husky": "^1.0.0-rc.13",
-    "jest": "^23.5.0",
-    "jest-coverage-processor": "^1.0.0",
-    "lint-staged": "^7.2.2",
-    "lodash": "^4.17.10",
+    "husky": "^1.3.1",
+    "jest": "^23.6.0",
+    "jest-coverage-processor": "^1.1.1",
+    "lint-staged": "^8.1.3",
+    "lodash": "^4.17.11",
     "memory-fs": "^0.4.1",
-    "prettier": "^1.14.2",
+    "prettier": "^1.16.4",
     "raw-loader": "^0.5.1",
-    "ts-jest": "^23.1.3",
+    "ts-jest": "^23.10.5",
     "ts-loader": "^4.5.0",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
     "tslint-config-webschik": "^1.0.0",
-    "typescript": "^3.0.1",
-    "webpack": "^4.16.5"
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.3"
   },
   "dependencies": {
-    "browserslist": "^4.0.1",
-    "loader-utils": "^1.1.0",
+    "browserslist": "^4.4.1",
+    "loader-utils": "^1.2.3",
     "schema-utils": "^1.0.0",
-    "semver": "^5.5.1"
+    "semver": "^5.6.0"
   },
   "jest": {
     "roots": [

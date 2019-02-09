@@ -137,13 +137,15 @@ const getLowestImplementedVersion = ({features}: FeatureOptions, env: string) =>
         return;
     }
 
-    return envTests.map((test: string) => test.replace(env, '')).reduce((version: string, label: string) => {
-        if (label === unreleasedLabelForEnv) {
-            return label;
-        }
+    return envTests
+        .map((test: string) => test.replace(env, ''))
+        .reduce((version: string, label: string) => {
+            if (label === unreleasedLabelForEnv) {
+                return label;
+            }
 
-        return semver.lt(semver.coerce(version) as any, semver.coerce(label) as any) ? label : version;
-    });
+            return semver.lt(semver.coerce(version) as any, semver.coerce(label) as any) ? label : version;
+        });
 };
 
 const builtInsSupportInfo = {
