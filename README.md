@@ -1,5 +1,5 @@
 # typescript-polyfills-generator
-[![Build Status](https://secure.travis-ci.org/webschik/typescript-polyfills-generator.png?branch=master)](https://travis-ci.org/webschik/typescript-polyfills-generator)
+[![Build Status](https://travis-ci.org/webschik/typescript-polyfills-generator.svg?branch=master)](https://travis-ci.org/webschik/typescript-polyfills-generator)
 [![npm](https://img.shields.io/npm/dm/typescript-polyfills-generator.svg)](https://www.npmjs.com/package/typescript-polyfills-generator)
 [![npm](https://img.shields.io/npm/v/typescript-polyfills-generator.svg)](https://www.npmjs.com/package/typescript-polyfills-generator)
 [![npm](https://img.shields.io/npm/l/typescript-polyfills-generator.svg)](https://www.npmjs.com/package/typescript-polyfills-generator)
