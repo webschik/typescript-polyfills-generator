@@ -1,5 +1,4 @@
 {
-
   "name": "typescript-polyfills-generator",
   "version": "0.1.1",
   "description": "Polyfills generator for a full ES2015+ environment support in TypeScript projects",
