@@ -1,7 +1,7 @@
 {
     "{src,test,scripts,jest}/**/*.ts": [
         "prettier --write",
-        "lint",
+        "tslint",
         "git add"
     ],
     "{src,test,scripts,jest}/**/*.js": [

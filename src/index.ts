@@ -75,8 +75,8 @@ export function createPolyfillsTransformerFactory(
                 featureStatusOrModuleName === false
                     ? undefined
                     : isString(featureStatusOrModuleName)
-                        ? (featureStatusOrModuleName as string)
-                        : (allPolyfills[feature] as string);
+                    ? (featureStatusOrModuleName as string)
+                    : (allPolyfills[feature] as string);
 
             if (polyfillModuleName) {
                 const supportInfo: EnvSupportInfo = allBuiltIns[feature];
