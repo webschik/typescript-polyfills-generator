@@ -1,10 +1,11 @@
 {
   "name": "typescript-polyfills-generator",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Polyfills generator for a full ES2015+ environment support in TypeScript projects",
   "main": "./lib/index.js",
   "files": [
-    "/lib"
+    "/lib",
+    "/data"
   ],
   "scripts": {
     "test": "jest --no-cache",
@@ -35,7 +36,7 @@
   },
   "homepage": "https://github.com/webschik/ts-polyfill-loader#readme",
   "devDependencies": {
-    "@types/jest": "^23.3.14",
+    "@types/jest": "^24.0.9",
     "@types/loader-utils": "^1.1.3",
     "@types/lodash": "^4.14.120",
     "@types/memory-fs": "^0.3.2",
@@ -47,14 +48,14 @@
     "coveralls": "^3.0.2",
     "electron-to-chromium": "^1.3.62",
     "husky": "^1.3.1",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "jest-coverage-processor": "^1.1.1",
     "lint-staged": "^8.1.3",
     "lodash": "^4.17.11",
     "memory-fs": "^0.4.1",
     "prettier": "^1.16.4",
     "raw-loader": "^0.5.1",
-    "ts-jest": "^23.10.5",
+    "ts-jest": "^24.0.0",
     "ts-loader": "^4.5.0",
     "ts-node": "^8.0.2",
     "tslint": "^5.12.1",
@@ -82,7 +83,7 @@
     "coverageThreshold": {
       "global": {
         "statements": 100,
-        "branches": 93.55,
+        "branches": 96,
         "functions": 100,
         "lines": 100
       }
@@ -101,7 +102,9 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/jest/config.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest/config.js"
+    ],
     "testResultsProcessor": "<rootDir>/jest/test-results-processor.js",
     "testRegex": "(/test/.*|\\.(test|spec))\\.ts$",
     "moduleFileExtensions": [
