@@ -7,6 +7,8 @@
 
 > Runtime polyfills generator for TypeScript projects, inspired by [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
 
+> ⚠️ !!! This module is on Proof of Concept stage, please, be careful using it in production !!!
+
 ## TLDR
 This module solves [https://github.com/Microsoft/TypeScript/issues/20095](https://github.com/Microsoft/TypeScript/issues/20095)
 
