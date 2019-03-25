@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/webschik/ts-polyfill-loader.git"
+    "url": "git+ssh://git@github.com/webschik/typescript-polyfills-generator.git"
   },
   "keywords": [
     "TypeScript",
@@ -32,9 +32,9 @@
   "author": "webschik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webschik/ts-polyfill-loader/issues"
+    "url": "https://github.com/webschik/typescript-polyfills-generator/issues"
   },
-  "homepage": "https://github.com/webschik/ts-polyfill-loader#readme",
+  "homepage": "https://github.com/webschik/typescript-polyfills-generator#readme",
   "devDependencies": {
     "@types/jest": "^24.0.9",
     "@types/loader-utils": "^1.1.3",
